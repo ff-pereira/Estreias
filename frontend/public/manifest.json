@@ -1,0 +1,20 @@
+{
+  "name": "Estreias",
+  "short_name": "Estreias",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#7D8878",
+  "theme_color": "#7D8878",
+  "icons": [
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

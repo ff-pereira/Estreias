@@ -1,0 +1,20 @@
+.idea/
+.vscode/
+
+# Environment files
+backend/.env
+backend/.venv
+backend/.flaskenv
+backend/**/__pycache__/
+backend/**/*.py[cod]
+backend/*$py.class
+backend/api/static
+backend/logs/
+backend/**/.coverage
+backend/**/.coverage.*
+backend/**/coverage.xml
+backend/**/htmlcov/
+
+frontend/.env
+frontend/dist/
+frontend/node_modules/

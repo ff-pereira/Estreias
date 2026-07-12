@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --color-primary: #7D8878;
+  --color-primary-light: #fff4e3;
+  --color-secondary: #F6F3E7;
+  --color-accent: #5E4662;
+  --color-dark-primary: #5A6256;
+  --color-darker-primary: #4f564c;
+
+  --color-beige: #EBDBC1;
+  --color-tealish: #7D8878;
+}
+
+@layer utilities {
+    /* Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+
+    .scrollbar-minimal::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    .scrollbar-minimal::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .scrollbar-minimal::-webkit-scrollbar-thumb {
+      background: #7D8878;
+      border-radius: 4px;
+    }
+
+    .scrollbar-minimal::-webkit-scrollbar-thumb:hover {
+      background: #7D8878;
+    }
+}
+
+/*
+.spinner {
+  @apply w-8 h-8 border-4 border-accent border-t-transparent rounded-full animate-spin;
+}
+*/
+
+
+.spinner {
+  width: 45px;
+  aspect-ratio: .75;
+  --c: no-repeat linear-gradient(#7D8878 0 0);
+  background:
+    var(--c) 0%   50%,
+    var(--c) 50%  50%,
+    var(--c) 100% 50%;
+  animation: l7 1s infinite linear alternate;
+}
+@keyframes l7 {
+  0%  {background-size: 20% 50% ,20% 50% ,20% 50% }
+  20% {background-size: 20% 20% ,20% 50% ,20% 50% }
+  40% {background-size: 20% 100%,20% 20% ,20% 50% }
+  60% {background-size: 20% 50% ,20% 100%,20% 20% }
+  80% {background-size: 20% 50% ,20% 50% ,20% 100%}
+  100%{background-size: 20% 50% ,20% 50% ,20% 50% }
+}
+
+
+
+
+.card{
+    @apply aspect-[2/3] object-cover rounded-md overflow-hidden shadow-md relative transform hover:scale-105 transition ease-in-out duration-200
+}
+
+.card2{
+    @apply aspect-[2/3] object-cover rounded-b-md rounded-tl-md overflow-hidden shadow-md relative transform hover:scale-105 transition ease-in-out duration-200
+}
+
+.input-field{
+  @apply w-full px-3 py-2 bg-gray-100 border border-primary/25 rounded-md shadow-sm focus:outline-primary focus:border-primary
+}
+
+.hover-text{
+  @apply transform hover:scale-105 hover:text-tealish transition ease-in-out duration-200
+}
+
+.hover-text-colorless{
+  @apply transform hover:scale-105 transition ease-in-out duration-200
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/*
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #7D8878;
+  border-radius: 9999px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #7D8878 transparent;
+}
+
+*/
